@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+        <title>Index</title>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/myfile.js"></script>
+		<script src="js/d3.v3.min.js"></script>
+
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/mystyle.css" rel="stylesheet">
+
+
+</head>
+<body>
+
+<h1 align="center">AFRICAN & MIXED COUTURE</h1>
+<h2 align="center">by Corinne Olabisi</h2>
+<!--<img src=""/>-->
+
+<!-- Menu horizontal --> 				
+<nav class="navbar navbar-default menuhorizontal">
+  <div class="container-fluid">
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+	  		
+			<li><a href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
+			
+			<li><a href="#" onclick="showCO();">A propos de Corinne Olabisi</a></li>
+			
+		<!-- Liste déroulante -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">&equiv; Cr&eacute;ations pour femmes</a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#" onclick="showTops();">Tops</a></li>
+            <li><a href="#" onclick="showCombi();">Combishort</a></li>
+            <li><a href="#" onclick="showRobes();">Robes</a></li>
+            <li><a href="#" onclick="showAF();">Accessoires</a></li>
+          </ul>
+        </li>
+		
+		<!-- Liste déroulante -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">&equiv; Cr&eacute;ations pour hommes</a>
+          <ul class="dropdown-menu" role="menu">
+			<li><a href="#" onclick="showAH();">Accessoires</a></li>
+          </ul>
+        </li>
+		
+		
+		<li><a href="#" onclick="showEvent();">Ev&eacute;nements</a></li>
+
+		<li><a href="#" onclick="showServices();">Services</a></li>
+
+      </ul>
+	  
+      <form class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Mots-cl&eacute;s">
+        </div>
+        <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+      </form>
+
+	  
+    </div>
+  </div>
+</nav>
+
+
+<div id="accueil">
+
+Africamix devient ... <!-- La je mets un nouveau LOGO -->African and Mixed Couture !
+<img src="img/mummy.jpeg">
+Découvrez ici toutes les nouvelles créations de Corinne Olabisi, 
+une styliste et une artiste qui m&eacute;lange son style unique avec son amour pour l'Afrique
+</div>
+
+<div id="CO">
+Biographie :
+</div>
+
+<div id="tops" align="center">
+
+
+<button type="button" class="btn btn-lg" data-toggle="modal" data-target="#top1" onclick="afficherModal(1);">
+<img class="images" src="img/tops/top1-1.jpg"/>
+</button><!--
+<button type="button" class="btn btn-lg" data-toggle="modal" data-target="#top2">
+<img id="2" class="images" onclick="afficherModal(2);" src="img/tops/top2-1.jpg"/>
+</button>
+<button type="button" class="btn btn-lg" data-toggle="modal" data-target="#top3">
+<img id="3" class="images" onclick="afficherModal(3);" src="img/tops/top3-1.jpg"/>
+</button>-->
+</div>
+
+<!--
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Top 1</h4>
+      </div>
+      <div class="modal-body">
+        <img class="imagesmodal" src="img/tops/top1-1.jpg"/>Description
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Fermer</button>
+      </div>
+    </div>
+  </div>
+</div>-->
+
+
+
+<div id="combishort">
+Préentation des combishort
+</div>
+<div id="robes">
+Présentation des robes
+</div>
+<div id="accessoiresf">
+Présentation des accessoires féminins
+</div>
+
+<div id="accessoiresh">
+Présentation des accessoires masculins
+</div>
+<div id="event">
+Les événements à venir
+<img src="img/menuevenement.png"/>
+</div>
+<div id="services">
+Autres services 
+</div>
+
+
+    </body>
+</html>
