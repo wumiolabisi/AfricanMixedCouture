@@ -137,6 +137,47 @@ Corinne Olabisi est
 <button type="button" class="btn btn-lg" data-toggle="modal" data-target="#top1" onclick="afficherModal(1);">
 <img class="images" src="img/tops/top1-1.jpg"/>
 </button>
+<?php
+
+$dsn ="mysql:dbname=africanmixedcouture;host=localhost";
+$username="root";
+$passwd="";   
+
+$pdo = new PDO($dsn, $username, $passwd);
+$resultatCreation = $pdo ->query("SELECT creation.libelle,creation.id_creation  FROM creation INNER JOIN categorie ON categorie.id_categorie = creation.idcategorie WHERE categorie.libelle = 'tops'");
+$listeCreation = $resultatCreation->fetchAll(PDO::FETCH_ASSOC);
+
+foreach($listeCreation as $value)
+{
+        $libelleCreation = $value['libelle'];
+        $idCreation = $value['id_creation'];
+
+ 
+         ?> Crea libelle <?php echo $libelleCreation  ?>
+          
+       <?php
+	   
+$resultatPhoto = $pdo ->query("SELECT photo.chemin FROM photo INNER JOIN creation ON creation.id_creation = photo.idcreation WHERE creation.id_creation = $idCreation ");
+$listePhoto = $resultatPhoto->fetchAll(PDO::FETCH_ASSOC);
+
+foreach($listePhoto as $value2)
+{
+        $cheminPhoto = $value2['chemin'];
+
+ 
+         ?><img class="images" src="<?php echo $cheminPhoto ?>"/>
+          
+       <?php
+	   
+	   
+	   
+	   
+   }  
+	}
+	  
+
+
+?>
 </div>
 
 <div id="combishort">
