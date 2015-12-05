@@ -6,9 +6,37 @@ background-image: -webkit-linear-gradient(left, rgb(255, 106, 106) 25%, rgb(255,
 background-image: -o-linear-gradient(left, rgb(255, 106, 106) 25%, rgb(255, 170, 170) 100%);
 background-image: -ms-linear-gradient(left, rgb(255, 106, 106) 25%, rgb(255, 170, 170) 100%);
 	font-family: Tahoma; 
+	color:black;
 
 }
 
+#contenu{
+
+display:box;
+
+}
+ #inscription{
+ 
+height:400px;
+width:400px;
+margin:50px;
+
+ }
+ #connexion{
+ 
+height:200px;
+width:200px;
+margin:50px;
+
+ }
+
+.menuvertical{
+
+float:left;
+background-color:#9A653D;
+margin:20px;
+
+}
 
 .images{
 
@@ -23,15 +51,29 @@ height:400px;
 width:400px;
 
 }
-
+a{
+color:black;
+}
+a:hover{
+color:pink;
+background-color:#9A653D;
+}
  .menuhorizontal
  {
-	margin:50px;
-	margin-bottom:20px;
 	font-size:15px;
-	color:#E9967A;
- }
+	color:white;
+	background-color:#9A653D;
 
+ }
+ .fontcolor{
+ color:white;
+ 
+ }
+ 
+ /*
+.navbar-default .navbar-nav>li>a {
+    color: #777;
+}*/
 /*
 
 .imgmenu{

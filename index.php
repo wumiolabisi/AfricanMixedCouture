@@ -1,4 +1,33 @@
-<!DOCTYPE html>
+<?php
+
+
+//Connexion
+if((isset($_POST['id'])) && (isset($_POST['motdepasse'])))
+            {  
+    
+                $connexion = mysqli_connect("localhost", "root","","africanmixedcouture");
+                $identifiant = addslashes($_POST['id']);
+                $mdp = addslashes($_POST['motdepasse']);
+                $requete = "select * from utilisateur where identifiant = '$identifiant' and motdepasse = '$mdp' ";
+                $result = mysqli_query($connexion, $requete);
+                if (mysqli_num_rows($result)> 0)
+ 
+                {
+                    {
+                        header("Location:accueil.php");
+                    }
+                }
+                else
+                {
+                    ?><script>alert("ERROR : Mauvais identifiant ou mot de passe.  Veuillez réessayer");</script><?php;
+                }
+            }    
+
+
+
+
+?>
+
 <html>
     <head>
 		<meta charset="utf-8">
@@ -11,20 +40,34 @@
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/myfile.js"></script>
 		<script src="js/d3.v3.min.js"></script>
+		<script>
+		
+//J'initialise une variable qui prend la valeur du cookie
+//Si celui-ci est n'est pas vide alors je ne propose pas à l'utilisateur de se connecter
+		
+		var cookies = document.cookie;
+	$(document).ready(  
+			function(){
 
+		if(cookies==""){
+			$('<div class="input-group" id="connexion"><center>Connectez-vous pour avoir acc&egrave;s &agrave; vos favoris<p><form method="post"><input type="text" class="form-control" placeholder="Email" aria-describedby="basic-addon1"><input type="text" class="form-control" placeholder="Mot de passe" aria-describedby="basic-addon1"><button type="submit" class="btn btn-default" value="Connexion">Connexion</button></form><a href="inscription.php">Ou inscrivez-vous</a></center></div>').appendTo('.menuvertical');
+		}else{
+			$('<div class="input-group" id="connexion"><center>Bienvenue !<p><a href="favoris.php">Voir la liste de mes favoris</a></center></div>').appendTo('.menuvertical');
+		}		
+	});
+	
+		</script>
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link href="css/mystyle.css" rel="stylesheet">
 
 
 </head>
 <body>
+<div align="center">
+<img src="img/banniere_transparente.png"/></div>
 
-<h1 align="center">AFRICAN & MIXED COUTURE</h1>
-<h2 align="center">by Corinne Olabisi</h2>
-<!--<img src=""/>-->
-
-<!-- Menu horizontal --> 				
-<nav class="navbar navbar-default menuhorizontal">
+<!-- Menu horizontal dans lequel se trouve les rubriques --> 				
+<nav class="menuhorizontal navbar">
   <div class="container-fluid">
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -58,6 +101,7 @@
 
 		<li><a href="#" onclick="showServices();">Services</a></li>
 
+
       </ul>
 	  
       <form class="navbar-form navbar-right" role="search">
@@ -72,74 +116,56 @@
   </div>
 </nav>
 
+<div id="contenu">
+<div class="menuvertical">
+<!-- Ici se trouvera le menu vertical qui est différent selon si le cookie est créé ou non-->
+</div>
 
 <div id="accueil">
 
 Africamix devient ... <!-- La je mets un nouveau LOGO -->African and Mixed Couture !
-<img src="img/mummy.jpeg">
 Découvrez ici toutes les nouvelles créations de Corinne Olabisi, 
 une styliste et une artiste qui m&eacute;lange son style unique avec son amour pour l'Afrique
 </div>
 
-<div id="CO">
-Biographie :
+
+<div id="CO" align="center">
+A propos de Corinne Olabisi
+
+Corinne Olabisi est   
 </div>
 
 <div id="tops" align="center">
-
-
+<h2 align="center">Les tops</h2>
 <button type="button" class="btn btn-lg" data-toggle="modal" data-target="#top1" onclick="afficherModal(1);">
 <img class="images" src="img/tops/top1-1.jpg"/>
-</button><!--
-<button type="button" class="btn btn-lg" data-toggle="modal" data-target="#top2">
-<img id="2" class="images" onclick="afficherModal(2);" src="img/tops/top2-1.jpg"/>
 </button>
-<button type="button" class="btn btn-lg" data-toggle="modal" data-target="#top3">
-<img id="3" class="images" onclick="afficherModal(3);" src="img/tops/top3-1.jpg"/>
-</button>-->
 </div>
-
-<!--
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Top 1</h4>
-      </div>
-      <div class="modal-body">
-        <img class="imagesmodal" src="img/tops/top1-1.jpg"/>Description
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary">Fermer</button>
-      </div>
-    </div>
-  </div>
-</div>-->
-
-
 
 <div id="combishort">
-Préentation des combishort
+<h2 align="center">Les combinaisons short et ensembles short</h2>
 </div>
+
 <div id="robes">
-Présentation des robes
+<h2 align="center">Les robes</h2>
 </div>
+
 <div id="accessoiresf">
-Présentation des accessoires féminins
+<h2 align="center">Les accessoires - pour femmes</h2>
 </div>
 
 <div id="accessoiresh">
-Présentation des accessoires masculins
+<h2 align="center">Les accessoires - pour hommes</h2>
 </div>
 <div id="event">
-Les événements à venir
+<h2 align="center">Ev&eacute;nements</h2>
 <img src="img/menuevenement.png"/>
 </div>
 <div id="services">
-Autres services 
+<h2 align="center">Services et Tarifs</h2>
 </div>
 
+</div>
 
     </body>
 </html>
