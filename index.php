@@ -2,19 +2,21 @@
 
 
 //Connexion
-if((isset($_POST['id'])) && (isset($_POST['motdepasse'])))
+if((isset($_POST['email'])) && (isset($_POST['motdepasse'])))
             {  
     
                 $connexion = mysqli_connect("localhost", "root","","africanmixedcouture");
-                $identifiant = addslashes($_POST['id']);
+                $email = addslashes($_POST['email']);
                 $mdp = addslashes($_POST['motdepasse']);
-                $requete = "select * from utilisateur where identifiant = '$identifiant' and motdepasse = '$mdp' ";
+                $requete = "select * from utilisateur where email = '$email' and motdepasse = '$mdp' ";
                 $result = mysqli_query($connexion, $requete);
                 if (mysqli_num_rows($result)> 0)
  
                 {
                     {
-                        header("Location:accueil.php");
+					?><script language="javascript">document.cookie="utilisateur=<?php echo $email?>";
+												    document.location = "index.php";</script>
+                  <?php
                     }
                 }
                 else
@@ -50,7 +52,7 @@ if((isset($_POST['id'])) && (isset($_POST['motdepasse'])))
 			function(){
 
 		if(cookies==""){
-			$('<div class="input-group" id="connexion"><center>Connectez-vous pour avoir acc&egrave;s &agrave; vos favoris<p><form method="post"><input type="text" class="form-control" placeholder="Email" aria-describedby="basic-addon1"><input type="text" class="form-control" placeholder="Mot de passe" aria-describedby="basic-addon1"><button type="submit" class="btn btn-default" value="Connexion">Connexion</button></form><a href="inscription.php">Ou inscrivez-vous</a></center></div>').appendTo('.menuvertical');
+			$('<div class="input-group" id="connexion"><center>Connectez-vous pour avoir acc&egrave;s &agrave; vos favoris<p><form method="post"><input type="text" class="form-control" placeholder="Email" aria-describedby="basic-addon1" name="email"><input type="text" class="form-control" placeholder="Mot de passe" aria-describedby="basic-addon1" name="motdepasse"><button type="submit" class="btn btn-default" value="Connexion">Connexion</button></form><a href="inscription.php">Ou inscrivez-vous</a></center></div>').appendTo('.menuvertical');
 		}else{
 			$('<div class="input-group" id="connexion"><center>Bienvenue !<p><a href="favoris.php">Voir la liste de mes favoris</a></center></div>').appendTo('.menuvertical');
 		}		
