@@ -15,6 +15,16 @@ background-image: -ms-linear-gradient(left, rgb(255, 106, 106) 25%, rgb(255, 170
 display:box;
 
 }
+.modalalignement
+{
+display:box;
+
+}
+
+.titre2{
+margin:30px;
+
+}
  #inscription{
  
 height:400px;
@@ -40,15 +50,15 @@ margin:20px;
 
 .images{
 
+
 height:200px;
-width:200px;
+width:210px;
 
 }
 
-.imagesmodal{
-
-height:400px;
-width:400px;
+.imagesmodals{
+height:100px;
+width:100px;
 
 }
 a{
