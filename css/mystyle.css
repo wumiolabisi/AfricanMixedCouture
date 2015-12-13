@@ -5,7 +5,7 @@ background-image: -moz-linear-gradient(left, rgb(255, 106, 106) 25%, rgb(255, 17
 background-image: -webkit-linear-gradient(left, rgb(255, 106, 106) 25%, rgb(255, 170, 170) 100%);
 background-image: -o-linear-gradient(left, rgb(255, 106, 106) 25%, rgb(255, 170, 170) 100%);
 background-image: -ms-linear-gradient(left, rgb(255, 106, 106) 25%, rgb(255, 170, 170) 100%);
-	font-family: Tahoma; 
+	font-family: Calibri; 
 	color:black;
 
 }
@@ -15,16 +15,32 @@ background-image: -ms-linear-gradient(left, rgb(255, 106, 106) 25%, rgb(255, 170
 display:box;
 
 }
-.modalalignement
-{
-display:box;
-
-}
 
 .titre2{
 margin:30px;
 
 }
+.alignement{
+display:box;
+}
+
+.description{
+
+margin:10px;
+height:550px;
+width:550px;
+float:left;
+}
+
+.libelle{
+
+margin:10px;
+height:250px;
+width:250px;
+float:left;
+}
+
+
  #inscription{
  
 height:400px;
@@ -48,18 +64,17 @@ margin:20px;
 
 }
 
-.images{
+.imagesmodals{
 
 
-height:200px;
-width:210px;
-
+height:390px;
+width:360px;
 }
 
-.imagesmodals{
-height:100px;
-width:100px;
-
+.images{
+height:190px;
+width:150px;
+display:box;
 }
 a{
 color:black;
