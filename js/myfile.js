@@ -384,30 +384,8 @@ $(document).ready(function()
 	 $("#services").hide();
 	 $("#accueil").fadeIn('slow');
 	 
-	 
-	 
-	 
- d3.csv("data/photos.csv", function(data) {
-			   photoCSV = data;
-			 });
-			 
-			
-			
+
 
 	 
   });
   
-  function afficherModal(t){
-  
-	
-	photoCSV.forEach(function(d){
-	if(d.ID == t){
-	alert("ok");
-	//$('<img src=" '+ d.Emplacement + '/' + d.Photo +'"').appendTo('#tops');
-$('<div class="modal fade" id="#top'+ t +'" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header">tton type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title" id="myModalLabel">Top 1</h4></div><div class="modal-body"><img class="imagesmodal" src=" '+ d.Emplacement +'/ '+ d.Photo +'"/>Description</div><div class="modal-footer"><button type="button" class="btn btn-primary">Fermer</button></div></div></div>').appendTo('#tops');
-	}else{
-	alert("KO !");
-	}
-	});
-				
-	}

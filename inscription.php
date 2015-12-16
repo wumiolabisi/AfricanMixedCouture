@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
  //$connexion = mysqli_connect("localhost", "root","","gsb");
 
@@ -37,13 +37,6 @@
 				}
 				
                 $dateInscription = date("Y-m-d H:i:s");
-				/*$requeteTest = "select $email from utilisateur";
-					$result = $bdd->exec($requeteTest);  
-				?> 
-				
-					<script>alert("<?php echo $result ?>");</script>
-				
-				<?php*/
 
                 $requete = "insert into utilisateur (nom,prenom,email,motdepasse,genre,dateinscription) VALUES ('$nom','$prenom','$email','$motdepasse','$genre','$dateInscription')";
                 $test = testForm();  
@@ -89,12 +82,13 @@
 
 </head>
 <body>
+
 <div align="center">
-<img src="img/banniere_transparente.png"/></div>
-<input type="button" value="Back" onclick="window.history.back();">
+<img src="img/banniere_transparente.png" height="500" width="700"/></div>
+
 
  <h2 align="center">Inscrivez-vous</h2>
- <h5 align="center">Vous avez la possibilit&eacute; de vous inscrire pour �tre inform&eacute; par Newsletter des nouvelles cr&eacute;ations ! Vous pouvez &eacute;galement 
+ <h5 align="center">Vous avez la possibilit&eacute; de vous inscrire pour être inform&eacute; par Newsletter des nouvelles cr&eacute;ations ! Vous pouvez &eacute;galement 
  choisir les cr&eacute;ations qui vous plaisent et elles seront automatiquement list&eacute;es dans votre liste de favoris   </h5>
 
 <div align="center">
@@ -111,6 +105,8 @@
 
 	<button type="submit" class="btn btn-default">Valider votre inscription</button>
 </form>
+<button type="button" class="btn btn-default" value="Back" onclick="window.history.back();">Retour</button>
+
 
 </div></div>
     </body>

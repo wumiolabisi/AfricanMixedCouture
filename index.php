@@ -2,17 +2,22 @@
 
 
 //Connexion
+
 if((isset($_POST['email'])) && (isset($_POST['motdepasse'])))
             {  
-    
-                $connexion = mysqli_connect("localhost", "root","","africanmixedcouture");
+
+			$connexion = mysqli_connect("localhost", "root","","africanmixedcouture");
+
                 $email = addslashes($_POST['email']);
                 $mdp = addslashes($_POST['motdepasse']);
+
                 $requete = "select * from utilisateur where email = '$email' and motdepasse = '$mdp' ";
+
                 $result = mysqli_query($connexion, $requete);
+				
                 if (mysqli_num_rows($result)> 0){
-                    
-					?><script language="javascript">document.cookie="utilisateur=<?php echo $email?>";
+
+				?><script language="javascript">document.cookie="utilisateur=<?php echo $email?>";
 												    document.location = "index.php";</script>
                   <?php
                     
@@ -21,7 +26,6 @@ if((isset($_POST['email'])) && (isset($_POST['motdepasse'])))
                 {
                     ?><script>alert("ERROR : Mauvais identifiant ou mot de passe.  Veuillez réessayer");</script><?php
                 }
-				
 				mysqli_close();
             }    
 
@@ -38,7 +42,6 @@ if((isset($_POST['email'])) && (isset($_POST['motdepasse'])))
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/myfile.js"></script>
-		<script src="js/d3.v3.min.js"></script>
 		<script>
 		
 //J'initialise une variable qui prend la valeur du cookie
@@ -51,7 +54,7 @@ if((isset($_POST['email'])) && (isset($_POST['motdepasse'])))
 		if(cookies==""){
 			$('<div class="input-group" id="connexion"><center>Connectez-vous pour avoir acc&egrave;s &agrave; vos favoris<p><form method="post"><input type="text" class="form-control" placeholder="Email" aria-describedby="basic-addon1" name="email"><input type="password" class="form-control" placeholder="Mot de passe" aria-describedby="basic-addon1" name="motdepasse"><button type="submit" class="btn btn-default" value="Connexion">Connexion</button></form><a href="inscription.php">Je ne suis pas inscrit(e)</a></center></div>').appendTo('.menuvertical');
 		}else{
-			$('<div class="input-group" id="connexion"><center>Bienvenue !<p><a href="favoris.php">Voir la liste de mes favoris</a><p><a href="#">Me déconnecter</a></center></div>').appendTo('.menuvertical');
+			$('<div class="input-group" id="connexion"><center>Bienvenue !<p><a href="favoris.php">Voir la liste de mes favoris</a><p><a href="deconnexion.php">Me déconnecter</a></center></div>').appendTo('.menuvertical');
 		}		
 	});
 	
@@ -63,7 +66,7 @@ if((isset($_POST['email'])) && (isset($_POST['motdepasse'])))
 </head>
 <body>
 <div align="center">
-<img src="img/banniere_transparente.png"/></div>
+<img src="img/banniere_transparente.png" height="500" width="700"/></div>
 
 <!-- Menu horizontal dans lequel se trouve les rubriques --> 				
 <nav class="menuhorizontal navbar">
@@ -128,7 +131,22 @@ $passwd="";
 
 $pdo = new PDO($dsn, $username, $passwd, array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
 
-?>
+if(isset($_COOKIE['utilisateur'])){
+$cookieEmail = $_COOKIE['utilisateur'];
+$resultatUti = $pdo ->query("SELECT id_utilisateur from utilisateur WHERE email = '$cookieEmail'");
+$listeUti = $resultatUti->fetchAll(PDO::FETCH_ASSOC);
+	   
+	  foreach($listeUti as $value4)
+{
+        $IdUser = $value4['id_utilisateur'];
+		?>
+<script language="javascript">
+
+document.cookie="idUtilisateur=<?php echo $IdUser?>";
+
+</script>
+<?php }
+	}?>
 
 <div id="accueil">
 

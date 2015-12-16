@@ -1,7 +1,7 @@
-<?php
+﻿<?php
 
 
-$resultatCreation = $pdo ->query("SELECT creation.libelle,creation.id_creation,creation.description  FROM creation INNER JOIN categorie ON categorie.id_categorie = creation.idcategorie WHERE categorie.libelle = 'tops'");
+$resultatCreation = $pdo ->query("SELECT creation.libelle,creation.id_creation,creation.description,creation.urlachat,creation.prix  FROM creation INNER JOIN categorie ON categorie.id_categorie = creation.idcategorie WHERE categorie.libelle = 'tops'");
 $listeCreation = $resultatCreation->fetchAll(PDO::FETCH_ASSOC);
 
 foreach($listeCreation as $value)
@@ -9,6 +9,8 @@ foreach($listeCreation as $value)
         $libelleCreation = $value['libelle'];
         $idCreation = $value['id_creation'];
 		$descriptionCreation = $value['description'];
+		$prixCreation = $value['prix'];
+		$urlCreation = $value['urlachat'];
 
  
          ?> <div class="libelle"><center><h5> <?php echo $libelleCreation  ?></h5> <?php
@@ -54,15 +56,18 @@ foreach($listePhoto2 as $value3)
 
 ?>
 
-<img class="imagesmodals" src="<?php echo $cheminPhoto2?>"/><br>
-<?php  }?>  	  <h5><?php echo $descriptionCreation ?></h5><br>
+<center><img class="imagesmodals" src="<?php echo $cheminPhoto2?>"/><br>
+<?php  }?>  	  <h5><?php echo $descriptionCreation ?></h5><br></center>
+<h5>Prix : <?php echo $prixCreation ?> €</h5><br>
  
       </div>
-
       <div class="modal-footer">
-	 <center> 	<button type="button" class="btn btn-default" data-dismiss="modal">Acheter sur AlittleMarket.com <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></button>
-	    <button type="button" class="btn btn-default" data-dismiss="modal">Favoris <span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span></button>
-        <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button></center>
+
+
+
+	 <center> 	<button type="button" class="btn btn-default" data-dismiss="modal" onclick="window.open('<?php echo $urlCreation ?>');">Acheter sur AlittleMarket.com <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></button>
+	 <button type="button" class="btn btn-default" data-dismiss="modal" onclick="window.open('favoris.php?idUti=<?php echo $IdUser ?>&idCrea=<?php echo $idCreation?>&insertion=1');">Favoris <span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span></button>
+   <?php }?>     <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button></center>
 	 </div>
     </div>
 
@@ -70,10 +75,9 @@ foreach($listePhoto2 as $value3)
 </div>
           
        <?php
-	     
-	   
+	        
    }  
-	}
+	
 	
 	 
 
