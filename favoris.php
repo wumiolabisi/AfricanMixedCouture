@@ -95,6 +95,5 @@ foreach($listePhotoFav as $value2)
 ?>
  </center>
  
- <button type="button" class="btn btn-default" value="Back" onclick="window.history.back();">Retour</button>
 </body>
 </html>

@@ -1,7 +1,7 @@
 ﻿<?php
 
 
-$resultatCreation = $pdo ->query("SELECT creation.libelle,creation.id_creation,creation.description,creation.urlachat,creation.prix  FROM creation INNER JOIN categorie ON categorie.id_categorie = creation.idcategorie WHERE categorie.libelle = 'combishort'");
+$resultatCreation = $pdo ->query("SELECT creation.libelle,creation.id_creation,creation.description,creation.urlachat,creation.prix  FROM creation INNER JOIN categorie ON categorie.id_categorie = creation.idcategorie WHERE categorie.libelle = 'accessoires_femmes'");
 $listeCreation = $resultatCreation->fetchAll(PDO::FETCH_ASSOC);
 
 foreach($listeCreation as $value)

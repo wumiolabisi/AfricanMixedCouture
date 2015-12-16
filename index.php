@@ -26,7 +26,7 @@ if((isset($_POST['email'])) && (isset($_POST['motdepasse'])))
                 {
                     ?><script>alert("ERROR : Mauvais identifiant ou mot de passe.  Veuillez réessayer");</script><?php
                 }
-				mysqli_close();
+				mysqli_close($connexion);
             }    
 
 ?>
@@ -53,7 +53,7 @@ if((isset($_POST['email'])) && (isset($_POST['motdepasse'])))
 
 		if(cookies==""){
 			$('<div class="input-group" id="connexion"><center>Connectez-vous pour avoir acc&egrave;s &agrave; vos favoris<p><form method="post"><input type="text" class="form-control" placeholder="Email" aria-describedby="basic-addon1" name="email"><input type="password" class="form-control" placeholder="Mot de passe" aria-describedby="basic-addon1" name="motdepasse"><button type="submit" class="btn btn-default" value="Connexion">Connexion</button></form><a href="inscription.php">Je ne suis pas inscrit(e)</a></center></div>').appendTo('.menuvertical');
-		}else{
+		}else if(cookies != ""){
 			$('<div class="input-group" id="connexion"><center>Bienvenue !<p><a href="favoris.php">Voir la liste de mes favoris</a><p><a href="deconnexion.php">Me déconnecter</a></center></div>').appendTo('.menuvertical');
 		}		
 	});
@@ -169,23 +169,45 @@ Corinne Olabisi est
 
 include 'divTop.php';
 ?>
+
 </div>
 
 <div id="combishort">
 <h2 align="center">Les combinaisons short et ensembles short</h2>
+
+<?php
+
+include 'divCombi.php';
+?>
+
 </div>
 
 <div id="robes">
-<h2 align="center">Les robes</h2>
+<h2 align="center">Les robes et ensembles jupes</h2>
+<?php
+
+include 'divRobes.php';
+?>
 </div>
 
 <div id="accessoiresf">
 <h2 align="center">Les accessoires - pour femmes</h2>
+
+<?php
+
+include 'divAF.php';
+?>
+
 </div>
 
 <div id="accessoiresh">
 <h2 align="center">Les accessoires - pour hommes</h2>
+<?php
+
+include 'divAH.php';
+?>
 </div>
+
 <div id="event">
 <h2 align="center">Ev&eacute;nements</h2>
 <img src="img/menuevenement.png"/>

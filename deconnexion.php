@@ -1,10 +1,8 @@
 <?php 
 
-  setcookie('utilisateur');
-  unset($_COOKIE['utilisateur']);
+  setcookie('utilisateur', NULL, -1);
 
-  setcookie('idUtilisateur');
-  unset($_COOKIE['idUtilisateur']);
+  setcookie('idUtilisateur', NULL, -1);
   
   $i = 0;
   while($i!=1){
