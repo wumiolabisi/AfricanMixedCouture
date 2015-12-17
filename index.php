@@ -76,7 +76,7 @@ if((isset($_POST['email'])) && (isset($_POST['motdepasse'])))
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
 	  		
-			<li><a href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
+			<li><a href="index.php"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
 			
 			<li><a href="#" onclick="showCO();">A propos de Corinne Olabisi</a></li>
 			

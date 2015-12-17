@@ -41,7 +41,7 @@
 <center>Bienvenue  dans la liste de vos favoris
  <p>
  Vous pouvez poursuivre et acheter les créations en cliquant sur le bouton "Acheter sur Alittlemarket.com" ou supprimez les éléments que vous avez mis en favoris
-<p> <a href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a>
+<p> Retour à l'accueil : <a href="index.php"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a>
  <p>
  <a href="deconnexion.php">Me déconnecter</a></center>
  
@@ -103,7 +103,21 @@ foreach($listePhotoFav as $value2)
 
          ?>
 <img class="images" src="<?php echo $cheminPhotoFav ?>"/><br>
+<?php	
+$resultatFavId = $pdo ->query("SELECT id_favoris from favoris WHERE idcreation = $idCreationFav");
+$listeFavId = $resultatFavId->fetchAll(PDO::FETCH_ASSOC);
+
+foreach($listeFavId as $value3)
+{
+        $FavId = $value3['id_favoris'];
+  ?>
 <button type="button" class="btn btn-default" data-dismiss="modal" onclick="window.open('<?php echo $urlCreationFav ?>');">Acheter sur AlittleMarket.com <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></button>
+
+	<button type="button" class="btn btn-default" data-dismiss="modal" onclick="window.open('supprimerFav.php?idFav=<?php echo $FavId ?>');">Supprimer des favoris <span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+
+<?php
+}
+?>
 </div>
 <?php
 	 
