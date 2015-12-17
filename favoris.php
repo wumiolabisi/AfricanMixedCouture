@@ -32,7 +32,24 @@
 <div align="center">
 <img src="img/banniere_transparente.png" height="500" width="700"/></div>
 
- <h3 align="center">Vos favoris</h3>
+ <div id="contenu">
+ 
+ 
+ <div class="menuhorizontal">
+  <h3 align="center">Vos favoris</h3>
+
+<center>Bienvenue  dans la liste de vos favoris
+ <p>
+ Vous pouvez poursuivre et acheter les créations en cliquant sur le bouton "Acheter sur Alittlemarket.com" ou supprimez les éléments que vous avez mis en favoris
+<p> <a href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a>
+ <p>
+ <a href="deconnexion.php">Me déconnecter</a></center>
+ 
+ </div>
+ 
+ 
+ 
+ 
 <center>
 <?php
 $dsn ="mysql:dbname=africanmixedcouture;host=localhost";
@@ -94,6 +111,6 @@ foreach($listePhotoFav as $value2)
 		 }
 ?>
  </center>
- 
+ </div>
 </body>
 </html>

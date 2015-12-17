@@ -1,3 +1,17 @@
+<html>
+    <head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+        <title>Index</title>
+		
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/mystyle.css" rel="stylesheet">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/myfile.js"></script>
+
 <?php
 
 
@@ -31,17 +45,6 @@ if((isset($_POST['email'])) && (isset($_POST['motdepasse'])))
 
 ?>
 
-<html>
-    <head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		
-        <title>Index</title>
-		
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-		<script src="js/myfile.js"></script>
 		<script>
 		
 //J'initialise une variable qui prend la valeur du cookie
@@ -59,8 +62,6 @@ if((isset($_POST['email'])) && (isset($_POST['motdepasse'])))
 	});
 	
 		</script>
-		<link href="css/bootstrap.min.css" rel="stylesheet">
-		<link href="css/mystyle.css" rel="stylesheet">
 
 
 </head>
@@ -184,9 +185,10 @@ include 'divCombi.php';
 
 <div id="robes">
 <h2 align="center">Les robes et ensembles jupes</h2>
+
 <?php
 
-include 'divRobes.php';
+//include 'divRobes.php';
 ?>
 </div>
 
@@ -202,10 +204,12 @@ include 'divAF.php';
 
 <div id="accessoiresh">
 <h2 align="center">Les accessoires - pour hommes</h2>
+
 <?php
 
-include 'divAH.php';
+//include 'divAH.php';
 ?>
+
 </div>
 
 <div id="event">

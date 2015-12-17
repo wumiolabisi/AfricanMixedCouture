@@ -25,7 +25,7 @@ foreach($listePhoto as $value2)
 
  
          ?><!-- Declenchement du modal -->
-<button type="button" class="btn-lg" data-toggle="modal" data-target="#myModal<?php echo $idCreation ?>">
+<button type="button"  data-toggle="modal" data-target="#myModal<?php echo $idCreation ?>">
 <img class="images" src="<?php echo $cheminPhoto ?>"/>
 <br>
 </button></center></div>
