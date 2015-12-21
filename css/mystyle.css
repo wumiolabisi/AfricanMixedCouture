@@ -7,8 +7,7 @@ background-image: -o-linear-gradient(left, rgb(255, 106, 106) 25%, rgb(255, 170,
 background-image: -ms-linear-gradient(left, rgb(255, 106, 106) 25%, rgb(255, 170, 170) 100%);
 	font-family: Calibri; 
 	color:black;
-
-}
+	}
 
 #contenu{
 
@@ -61,8 +60,9 @@ margin:50px;
 float:left;
 background-color:#9A653D;
 margin:20px;
-
+height:100%;
 }
+
 
 .imagesmodals{
 
@@ -95,6 +95,11 @@ background-color:#9A653D;
  
  }
  
+ footer{
+background-color:#9A653D;
+padding:30px;
+color:white; 
+ }
  /*
 .navbar-default .navbar-nav>li>a {
     color: #777;

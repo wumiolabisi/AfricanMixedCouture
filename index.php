@@ -123,7 +123,14 @@ if((isset($_POST['email'])) && (isset($_POST['motdepasse'])))
 <div class="menuvertical">
 <!-- Ici se trouvera le menu vertical qui est différent selon si le cookie est créé ou non -->
 </div>
+<div id="instagram" style="float:right;height:100%;margin:20px;">
 
+<h3 align="center"><b><img src="img/instagram-logo-sketch.png" height="40px" width="50px"/>Suivez-moi sur Instagram !</b></h3>
+<script src="http://snapwidget.com/js/snapwidget.js"></script>
+<iframe src="http://snapwidget.com/in/?u=Y29yaW5uZW9sYWJpc2l8aW58MTI1fDN8M3x8bm98NXxmYWRlSW58b25TdGFydHx5ZXN8eWVz&ve=211215" title="Instagram Widget" class="snapwidget-widget" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%;"></iframe>
+
+
+</div>
 <?php
 // (Re) Connexion à la base de données
 $dsn ="mysql:dbname=africanmixedcouture;host=localhost";
@@ -151,9 +158,21 @@ document.cookie="idUtilisateur=<?php echo $IdUser?>";
 
 <div id="accueil">
 
-Africamix devient ... <!-- La je mets un nouveau LOGO -->African and Mixed Couture !
-Découvrez ici toutes les nouvelles créations de Corinne Olabisi, 
-une styliste et une artiste qui m&eacute;lange son style unique avec son amour pour l'Afrique
+<i>"Faites-vous plaisir, soyez belle et sexy. Surtout soyez unique et restez vous-même. Mes créations aiment les femmes de toutes les tailles et 
+toutes les formes et les rendent belles et très féminines. Et bien entendu les hommes aussi !"</i>
+<br><br><center><h2 style="color:white;text-shadow: 8px 5px 15px black;">Africamix devient ... African and Mixed Couture !</h2><img src="img/mamannigeria_patch.jpg" height="350px" width="500px"/></center>
+<br><h4>Découvrez ici toutes les nouvelles créations de Corinne Olabisi, 
+une styliste qui m&eacute;lange son style unique avec son amour pour l'Afrique. Vous trouverez aussi toutes les informations concernant
+ses événements et boutiques éphémères. Vous pouvez vous inscrire sur le côté et vous aurez accès à votre liste de favoris ainsi qu'à une newsletter sur mesure, rien que pour vous !
+<br>
+<br>
+Les créations de Corinne Olabisi sont uniques, 100% faites à la main et sont composées de deux tissus différents : Un tissu africain Wax et un tissu simple et uni assorti au Wax auquel il est mélangé. 
+Vous pouvez acheter les créations de votre choix à tout moment sur <a href="http://www.alittlemarket.com/boutique/africamix-1122727.html">aLittleMarket</a>, dans la boutique Africamix !
+<br>
+<br><center><img src="img/logo-alittlemarket1.png"/></center><br><br><p>
+Suivez-la sur ses réseaux sociaux ou consulter la rubrique Evénements pour être au courant des prochains événements !
+<br><br><center><img src="img/photoEventMontage.png"/></center>
+</h4>
 </div>
 
 
@@ -219,8 +238,17 @@ include 'divAF.php';
 <div id="services">
 <h2 align="center">Services et Tarifs</h2>
 </div>
+	</div>
 
-</div>
+<footer>
+	<h2><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Contacts</h2>
+	<br>
+	<h4>Pour toute autre information, vous pouvez contacter Corinne Olabisi par mail au :<br>
+	<a href="mailto:olacorinne@yahoo.fr">olacorinne@yahoo.fr</a>
+	</h4>		<h6 align="center">Site réalisé par Omowumi Olabisi</h6>
+
+</footer>
 
     </body>
+	
 </html>
