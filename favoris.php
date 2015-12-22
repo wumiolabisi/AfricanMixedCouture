@@ -1,24 +1,11 @@
-﻿ 	<script>
-	
-	
-	$(document).ready(  
-			function(){
-
-		if(cookies==""){
-		alert('Vous n''êtes pas connecté(e) ! Connectez-vous ou inscrivez-vous pour créer votre liste de favoris');
-		document.location('index.php');
-		}
-	});
-	
-		</script>
- <html>
+﻿ <html>
      <head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		
         <title>Favoris</title>
-		
+		 	
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/myfile.js"></script>
@@ -73,14 +60,25 @@ header('Location:favoris.php?idUser='.$idUser);
 
 $i++;
 
-}
-}
-}
+			}
+		}
+	}
 
 if(isset($_COOKIE['idUtilisateur'])){
 
 $idUser = $_COOKIE['idUtilisateur'];
+
+}else{
+while($i!=1){
+
+header('Location:index.php');
+
+$i++;
+
+			}
+
 }
+
 
 $resultatFav = $pdo ->query("SELECT creation.libelle,creation.id_creation,creation.urlachat FROM creation INNER JOIN favoris ON favoris.idcreation = creation.id_creation WHERE favoris.idutilisateur = $idUser");
 $listeFav = $resultatFav->fetchAll(PDO::FETCH_ASSOC);
@@ -126,5 +124,6 @@ foreach($listeFavId as $value3)
 ?>
  </center>
  </div>
+ 
 </body>
 </html>

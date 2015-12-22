@@ -110,4 +110,12 @@
 
 </div></div>
     </body>
+	<footer><div id="contact">
+	<h2>  <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>  Contacts</h2>
+	<br>
+	<h4>  Pour toute autre information, vous pouvez contacter Corinne Olabisi par mail à :<br>
+	  <a href="mailto:olacorinne@yahoo.fr">olacorinne@yahoo.fr</a>
+	</h4>	</div>	<h6 align="center">Site réalisé par Omowumi Olabisi</h6>
+
+</footer>
 </html>

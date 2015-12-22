@@ -41,7 +41,7 @@ else if(varDivServices == true){
 $("#services").fadeOut('slow');
 $("#CO").fadeIn('slow');
 }
-
+$("#instagram").fadeOut('slow');
 }
 
 function showTops(){
@@ -87,7 +87,7 @@ else if(varDivServices == true){
 $("#services").fadeOut('slow');
 $("#tops").fadeIn('slow');
 }
-
+$("#instagram").fadeOut('slow');
 }
 
 function showCombi(){
@@ -133,7 +133,7 @@ else if(varDivServices == true){
 $("#services").fadeOut('slow');
 $("#combishort").fadeIn('slow');
 }
-
+$("#instagram").fadeOut('slow');
 }
 
 
@@ -180,7 +180,7 @@ else if(varDivServices == true){
 $("#services").fadeOut('slow');
 $("#robes").fadeIn('slow');
 }
-
+$("#instagram").fadeOut('slow');
 }
 
 function showAF(){
@@ -226,7 +226,7 @@ else if(varDivServices == true){
 $("#services").fadeOut('slow');
 $("#accessoiresf").fadeIn('slow');
 }
-
+$("#instagram").fadeOut('slow');
 }
 
 function showAH(){
@@ -272,7 +272,7 @@ else if(varDivServices == true){
 $("#services").fadeOut('slow');
 $("#accessoiresh").fadeIn('slow');
 }
-
+$("#instagram").fadeOut('slow');
 }
 
 
@@ -319,7 +319,7 @@ else if(varDivAH == true){
 $("#accessoiresh").fadeOut('slow');
 $("#services").fadeIn('slow');
 }
-
+$("#instagram").fadeOut('slow');
 }
 
 
@@ -366,11 +366,9 @@ else if(varDivAH == true){
 $("#accessoiresh").fadeOut('slow');
 $("#event").fadeIn('slow');
 }
-
+$("#instagram").fadeOut('slow');
 }
 
-
-var photoCSV;
  
 $(document).ready(function()
   {
