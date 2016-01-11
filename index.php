@@ -170,7 +170,7 @@ une styliste qui m&eacute;lange son style unique avec son amour pour l'Afrique. 
 ses événements et boutiques éphémères. Vous pouvez vous inscrire sur le côté et vous aurez accès à votre liste de favoris ainsi qu'à une newsletter sur mesure, rien que pour vous !
 <br>
 <br>
-Les créations de Corinne Olabisi sont uniques, 100% faites à la main et sont composées de deux tissus différents : Un tissu africain Wax et un tissu simple et uni assorti au Wax auquel il est mélangé. 
+Les créations de Corinne Olabisi sont uniques, 100% faites à la main et sont composées de deux tissus différents : Un tissus africain Wax et un tissus uni assorti. 
 Vous pouvez acheter les créations de votre choix à tout moment sur <a href="http://www.alittlemarket.com/boutique/africamix-1122727.html">aLittleMarket</a>, dans la boutique Africamix !
 <br>
 <br><center><img src="img/logo-alittlemarket1.png"/></center><br><br><p>
@@ -262,6 +262,238 @@ include 'divAF.php';
 </div>
 <div id="services">
 <h2 align="center">Services et Tarifs</h2>
+<br>
+Corinne Olabisi réalise pour vous les modèles présentés dans les catégories créations pour hommes et femmes sur mesure si vous le souhaiter.
+<br>Elle peut également retoucher vos vêtements. Vous trouverez ci-dessous les tarifs de retouches.
+<br>
+Pour commander une création sur mesure ou faire retoucher vos vêtements, vous pouvez la contacter par mail : olacorinne@yahoo.fr
+<br>
+<br>
+
+<table border="2" class="table" style="width:50%">
+<tr>
+        <td><h4 align="center"><b>Retouches sur jupes, robes et tops</b></h4></td>
+    </tr>
+    <tr>
+        <td><b>DESIGNATION</b></td>
+        <td><b>PRIX UNIT. TTC EN €</b></td>
+    </tr>
+    <tr>
+        <td>Raccourcir (jupe/robe droite)</td>
+        <td>15</td>
+    </tr>
+    <tr>
+        <td>Ourlet sur jupe plissée</td>
+        <td>20</td>
+    </tr>
+    <tr>
+        <td>Rétrécir sur les côtés sur toute la longueur - sans doublure</td>
+        <td>15</td>
+    </tr>
+    <tr>
+        <td>Rétrécir sur les côtés sur toute la longueur - avec doublure</td>
+        <td>25</td>
+    </tr>
+    <tr>
+        <td>Cintrage robe</td>
+        <td>12</td>
+    </tr>
+    <tr>
+        <td>Pose fermeture glissière (non fournie) jupe</td>
+        <td>10</td>
+    </tr>
+    <tr>
+        <td>Pose fermeture glissière (non fournie) robe</td>
+        <td>15</td>
+    </tr>
+    <tr>
+        <td>Cintrage chemisier</td>
+        <td>10</td>
+    </tr>
+    <tr>
+        <td>Raccourcissement chemisier</td>
+        <td>12</td>
+    </tr>
+    <tr>
+        <td>Raccourcissement manches avec pattes poignets</td>
+        <td>12</td>
+    </tr>
+    <tr>
+        <td>Raccourcissement manches sans pattes poignets</td>
+        <td>10</td>
+    </tr>
+</table>
+<br>
+<center>
+<table border="2" class="table" style="width:50%">
+<tr>
+        <td><h4 align="center"><b>Retouches sur pantalons</b></h4></td>
+    </tr>
+    <tr>
+        <td><b>DESIGNATION</b></td>
+        <td><b>PRIX UNIT. TTC EN €</b></td>
+    </tr>
+    <tr>
+        <td>Ourlet</td>
+        <td>10</td>
+    </tr>
+    <tr>
+        <td>Ourlet américain (avec revers)</td>
+        <td>12</td>
+    </tr>
+    <tr>
+        <td>Ourlet sur Jeans</td>
+        <td>10</td>
+    </tr>
+    <tr>
+        <td>Reprendre la ceinture</td>
+        <td>12</td>
+    </tr>
+    <tr>
+        <td>Rétrécir un côté du pantalon</td>
+        <td>12</td>
+    </tr>
+    <tr>
+        <td>Rétrécir deux côtés</td>
+        <td>15</td>
+    </tr>
+    <tr>
+        <td>Fourche entrejambes</td>
+        <td>15</td>
+    </tr>
+    <tr>
+        <td>Changer la fermeture glissière (non fournie)</td>
+        <td>12</td>
+    </tr>
+    <tr>
+        <td>Rétrécir le bas (fuselage)</td>
+        <td>20</td>
+    </tr>
+</table>
+
+
+<table border="2" class="table" style="width:50%">
+<tr>
+        <td><h4 align="center"><b>Retouches sur vestes et manteaux</b></h4></td>
+    </tr>
+    <tr>
+        <td><b>DESIGNATION</b></td>
+        <td><b>PRIX UNIT. TTC EN €</b></td>
+    </tr>
+    <tr>
+        <td>Ourlet manche simple piqué</td>
+        <td>15</td>
+    </tr>
+    <tr>
+        <td>Manches rondes doublées</td>
+        <td>17</td>
+    </tr>
+    <tr>
+        <td>Manches avec boutonnières</td>
+        <td>20</td>
+    </tr>
+    <tr>
+        <td>Ourlet bas droit</td>
+        <td>25</td>
+    </tr>
+    <tr>
+        <td>Ourlet en gobet</td>
+        <td>30</td>
+    </tr>
+    <tr>
+        <td>Cintrer la taille</td>
+        <td>20</td>
+    </tr>
+    <tr>
+        <td>Changer fermeture glissière (non fournie) 3/4</td>
+        <td>20</td>
+    </tr>
+	  <tr>
+        <td>Changer fermeture glissière (non fournie) long</td>
+        <td>30</td>
+    </tr>
+</table>
+
+<table border="2" class="table" style="width:50%">
+<tr>
+        <td><h4 align="center"><b>Autres retouches vêtements</b></h4></td>
+    </tr>
+    <tr>
+        <td><b>DESIGNATION</b></td>
+        <td><b>PRIX UNIT. TTC EN €</b></td>
+    </tr>
+    <tr>
+        <td>Reprise simple  (accrocs, raccourcissement bretelles, etc...)</td>
+        <td>5</td>
+    </tr>
+    <tr>
+        <td>Changement ou pose élastique sur tous vêtements</td>
+        <td>15</td>
+    </tr>
+    <tr>
+        <td>Raccourcir le bas de t-shirt</td>
+        <td>8</td>
+    </tr>
+    <tr>
+        <td>Pose de biais ou galon - le mètre</td>
+        <td>5</td>
+    </tr>
+	  <tr>
+        <td>Raccourcissement bretelles larges avec fronces</td>
+        <td>3</td>
+    </tr>
+    <tr>
+        <td>Déchirure couture sur manteau doublé (doudoune)</td>
+        <td>5</td>
+    </tr>
+	  <tr>
+        <td>Fabrication + pose de passants ceinture</td>
+        <td>8</td>
+    </tr>
+ <tr>
+        <td>Reprise fond de poche manteaux</td>
+        <td>5</td>
+    </tr>
+    <tr>
+        <td>Pose boutons</td>
+        <td>0.50</td>
+    </tr>
+    <tr>
+        <td>Boutonnière</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>Autres selon tarif horaire</td>
+        <td>20 €/heure</td>
+    </tr>
+</table>
+
+<table border="2" class="table" style="width:50%">
+<tr>
+        <td><h4 align="center"><b>Ameublement</b></h4></td>
+    </tr>
+    <tr>
+        <td><b>DESIGNATION</b></td>
+        <td><b>PRIX UNIT. TTC EN €</b></td>
+    </tr>
+    <tr>
+        <td>Rideaux selon longueur - le mètre</td>
+        <td>10</td>
+    </tr>
+    <tr>
+        <td>Ruban rufflette 35mm posé - le mètre</td>
+        <td>5</td>
+    </tr>
+    <tr>
+        <td>Housse de coussins/oreillers 45x45</td>
+        <td>7</td>
+    </tr>
+    <tr>
+        <td>Confection rideau (sans tissu)</td>
+        <td>5</td>
+    </tr>
+</table>
+</center>
 </div>
 	</div>
 
